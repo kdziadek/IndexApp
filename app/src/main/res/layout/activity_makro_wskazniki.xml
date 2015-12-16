@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.kasia.indexapp.Makro_wskazniki">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="false"
+        android:stretchColumns="1,2">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zaznacz wszystko"
+                android:id="@+id/button4"
+                android:layout_column="1"
+                android:onClick="zaznaczWszystko"
+                android:textSize="10dp"
+                android:background="@drawable/my_button"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Odznacz wszystko"
+                android:id="@+id/button5"
+                android:layout_column="2"
+                android:onClick="odznaczWszystko"
+                android:textSize="10dp"
+                android:background="@drawable/my_button"
+                android:textColor="#ffffff" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/my_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pobierz"
+        android:id="@+id/makroPobierz"
+        android:layout_gravity="right"
+        android:onClick="wyswietlZaznaczone"
+        android:background="@drawable/my_button"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

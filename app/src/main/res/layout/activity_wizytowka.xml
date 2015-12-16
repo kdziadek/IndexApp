@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.kasia.indexapp.Wizytowka"
+    android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tytul_pracy"
+            android:id="@+id/textView8"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:textSize="16dp"
+            android:textIsSelectable="true" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logouek" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Katarzyna Dziadek"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Informatyka Stosowana"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Uniwerystet Ekonomiczny w Krakowie"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="14dp" />
+
+</LinearLayout>

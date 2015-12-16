@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">IndexApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_aktualne__dane">Aktualne dane</string>
+    <string name="title_activity_archiwalne__dane">Archiwalne dane</string>
+    <string name="title_activity_wizytowka">Wizytówka</string>
+    <string name="pref_makro">Wskaźniki makroekonomiczne</string>
+    <string name="pref_makro_summ">Wybierz wskaźnik makroekonomiczny</string>
+    <string name="title_activity_makro_wskazniki">Wskaźniki makroekonomiczne</string>
+    <string name="tytul_pracy">Aplikacje mobilne jako narzędzia poprawiające efektywność pozyskiwania wiedzy o gospodarce</string>
+    <string name="title_activity_praca">Rynek pracy</string>
+    <string name="title_activity_praca_wskazniki">Rynek pracy</string>
+    <string name="title_activity_finanse_wskazniki">Wskaźniki finansowe i monetarne</string>
+    <string name="title_activity_praca_wyniki">Rynek pracy - wyniki</string>
+    <string name="title_activity_finanse_wyniki">Wskaźniki finansowe i monetarne - wyniki</string>
+    <string name="title_activity_makro_wyniki">Wskaźniki makroekonomiczne - wyniki</string>
+    <string name="title_activity_archwum_wyniki">Dane archiwalne - wyniki</string>
+    <string name="title_activity_archiwum_wyniki">Dane archiwalne - wyniki</string>
+    <string name="title_activity_archiwalne_dane">Dane archiwalne</string>
+    <string name="title_activity_kursy_wyniki">Kursy walut - wyniki</string>
+    <string name="title_activity_kursy_walut">Kursy walut</string>
+    <string name="dialog_deleteDatabase">Usunąć bazę danych?</string>
+    <string name="usunBaze">Usuń</string>
+    <string name="anuluj">Anuluj</string>
+</resources>
