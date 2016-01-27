@@ -150,13 +150,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
-    public int getIndexCount(String nazwa) {
 
-        String countQuery = "SELECT  * FROM " + TABLE_INDEX +" WHERE nazwa='"+nazwa+"'";
-        Cursor cursor = db.rawQuery(countQuery, null);
-
-        return cursor.getCount();
-    }
 
     // aktualizacja wskaznika
     public int updateIndex(Wskaznik wskaznik) {

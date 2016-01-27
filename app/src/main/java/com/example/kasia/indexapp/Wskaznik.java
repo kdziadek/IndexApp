@@ -11,6 +11,10 @@ public class Wskaznik {
     private String wartosc;
     public boolean selected;
 
+    public Wskaznik(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
     public Wskaznik(int id, String nazwa, String data, String wartosc) {
         this.id = id;
         this.nazwa = nazwa;
@@ -65,5 +69,9 @@ public class Wskaznik {
 
     public boolean isSelected() {
         return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

@@ -21,7 +21,7 @@ import java.net.URLConnection;
 
 public class finanse_wyniki extends ActionBarActivity {
 
-    private static final String TAG = "ProjectServerDemo";
+    private static final String TAG = "IndexApp";
     public static final String SERVER_URL = "http://v-ie.uek.krakow.pl/~s166530/";
     public static final String QUERY_FILE = "baza.xml";
     public static final String QUERY_URL = SERVER_URL + QUERY_FILE;
@@ -90,7 +90,7 @@ public class finanse_wyniki extends ActionBarActivity {
                 toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             } catch (IOException e) {
                 Log.e(TAG, "XmlPullParserExecption", e);
-                toastText="Problem pobieraniem danych XmlPullParserExecpetion";
+                toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             }
             return null;
         }

@@ -21,7 +21,7 @@ import java.util.List;
 
 public class praca_wyniki extends ActionBarActivity {
 
-    private static final String TAG = "ProjectServerDemo";
+    private static final String TAG = "indexApp";
     public static final String SERVER_URL = "http://v-ie.uek.krakow.pl/~s166530/";
     public static final String QUERY_FILE = "baza.xml";
     public static final String QUERY_URL = SERVER_URL + QUERY_FILE;
@@ -33,9 +33,8 @@ public class praca_wyniki extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_praca_wyniki);
 
-        //db = new DatabaseHandler(this);
 
-        Log.i(TAG, "Query server...");
+        Log.i(TAG, "³¹czenie z serwerem...");
         AsyncDownloader downloader = new AsyncDownloader();
         downloader.execute();
 
@@ -44,19 +43,15 @@ public class praca_wyniki extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -85,17 +80,17 @@ public class praca_wyniki extends ActionBarActivity {
 
         private XmlPullParser tryDownloadingXmlData() {
             try {
-                Log.i(TAG, "Now downloading...");
+                Log.i(TAG, "Pobieram dane...");
                 URL xmlUrl = new URL(QUERY_URL);
                 XmlPullParser receivedData = XmlPullParserFactory.newInstance().newPullParser();
                 receivedData.setInput(xmlUrl.openStream(), null);
                 return receivedData;
             } catch (XmlPullParserException e) {
-                Log.e(TAG, "XmlPullParserExecption", e);
+                Log.e(TAG, "XmlPullParserException", e);
                 toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             } catch (IOException e) {
-                Log.e(TAG, "XmlPullParserExecption", e);
-                toastText="Problem pobieraniem danych XmlPullParserExecpetion";
+                Log.e(TAG, "XmlPullParserException", e);
+                toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             }
             return null;
         }
@@ -116,7 +111,7 @@ public class praca_wyniki extends ActionBarActivity {
         }
 
         private int processReceivedData(XmlPullParser xmlData) throws XmlPullParserException, IOException {
-            int recordsFound = 0; // Find values in the XML records
+            int recordsFound = 0;
             String text = "";
             String wartoscWskaznika = "";
             String nazwaWskaznika = "";
@@ -157,7 +152,7 @@ public class praca_wyniki extends ActionBarActivity {
             if (recordsFound == 0) {
                 publishProgress();
             }
-            Log.i(TAG, "Finished processing " + recordsFound + " records.");
+            Log.i(TAG, "Pobrano " + recordsFound + " rekordów.");
             toastText="Pobieranie danych zakonczono sukcesem";
             return recordsFound;
         }
@@ -165,7 +160,7 @@ public class praca_wyniki extends ActionBarActivity {
         @Override
         protected void onProgressUpdate(String... values) {
             if (values.length == 0) {
-                Log.i(TAG, "No data downloaded");
+                Log.i(TAG, "Nie pobrano ¿adnych danych");
             }
             if (values.length == 3) {
                 String nazwaWskaznika = values[0];
@@ -175,8 +170,6 @@ public class praca_wyniki extends ActionBarActivity {
                     if (nazwaWskaznika.equalsIgnoreCase(Praca_wskazniki.zaznaczoneWskaznikiNazwa[i])){
 
                         Log.i(TAG, nazwaWskaznika + ": " + wartoscWskaznika + ": "+dataWskaznika);
-                        //Log.i(TAG, " ItemID: " + itemId + ", Data: " + data);
-                        // Pass it to the application
                         wynik += nazwaWskaznika + ": " + wartoscWskaznika + "\n";
 
                         if (MainActivity.db.sprawdz(nazwaWskaznika,wartoscWskaznika,dataWskaznika)){

@@ -36,14 +36,11 @@ public class Finanse_wskazniki extends ActionBarActivity {
         listView = (ListView) findViewById(R.id.my_list);
         adapter = new MyAdapter(this,getModel());
         listView.setAdapter(adapter);
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_finanse_wskazniki, menu);
         return true;
     }

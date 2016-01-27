@@ -88,7 +88,7 @@ public class makro_wyniki extends ActionBarActivity {
                 toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             } catch (IOException e) {
                 Log.e(TAG, "XmlPullParserExecption", e);
-                toastText="Problem pobieraniem danych XmlPullParserExecpetion";
+                toastText="Problem z pobieraniem danych XmlPullParserExecpetion";
             }
             return null;
         }

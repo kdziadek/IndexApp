@@ -38,27 +38,18 @@ public class Praca_wskazniki extends ActionBarActivity {
 
 
 
-    /*public void onItemClick(AdapterView<?> arg0, View v, int position, long arg3) {
-        TextView label = (TextView) v.getTag(R.id.label);
-        CheckBox checkbox = (CheckBox) v.getTag(R.id.check);
-        nazwy = label.getText().toString()+" "+isCheckedOrNot(checkbox);
-    }*/
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_praca_wskazniki, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -66,13 +57,6 @@ public class Praca_wskazniki extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    private String isCheckedOrNot(CheckBox checkbox) {
-        if(checkbox.isChecked())
-            return "is checked";
-        else
-            return "is not checked";
-    }
 
     private List<Model> getModel() {
 

@@ -50,7 +50,7 @@ public class Kursy_walut extends ActionBarActivity {
         switch (item.getItemId()) {
             case R.id.deleteDatabase:
                 DialogDeleteDatabase dialog = new DialogDeleteDatabase();
-                dialog.show(getFragmentManager(), "Potwierd? usuwanie");
+                dialog.show(getFragmentManager(), "Potwierdz usuwanie");
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -58,12 +58,7 @@ public class Kursy_walut extends ActionBarActivity {
 
     }
 
-    private String isCheckedOrNot(CheckBox checkbox) {
-        if(checkbox.isChecked())
-            return "is checked";
-        else
-            return "is not checked";
-    }
+
 
     private List<Model> getModel() {
         list.add(new Model("EUR"));

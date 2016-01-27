@@ -27,6 +27,7 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+    //Menu usuwanie bazy
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
@@ -37,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
 
                 Bundle b = new Bundle();
 
-                dialog.show(getFragmentManager(), "potwierdzanie usuwnia");
+                dialog.show(getFragmentManager(), "potwierdzanie usuwanie");
 
                 return true;
             default:
@@ -45,6 +46,8 @@ public class MainActivity extends ActionBarActivity {
         }
 
     }
+
+    //Przyciski
 
     public void pobierzDane(View view) {
         Intent pobierzIntent = new Intent(this,Aktualne_Dane.class);
